@@ -28,6 +28,10 @@ it "#name returns username when no name is set"
 ```
 Rerun `rspec` again in the terminal. With `-f d`, the difference is more apparent but we wrote our first spec and it was met. Now we only have 9 pending examples. Use this example, the lesson plan, the links below, google, your classmates and as an ultimate measure the solution branch to complete the definitions for the last 9 examples.
 
-[More on matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
-[Let](https://www.relishapp.com/rspec/rspec-core/v/2-5/docs/helper-methods/let-and-let)
-[Good rspec guide](http://betterspecs.org/)
+- [Good rspec guide](http://betterspecs.org/)
+
+- [More on matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
+
+- [Let](https://www.relishapp.com/rspec/rspec-core/v/2-5/docs/helper-methods/let-and-let)
+
+- [Hooks (before and after)](https://www.relishapp.com/rspec/rspec-core/v/2-2/docs/hooks/before-and-after-hooks)
