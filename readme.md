@@ -10,10 +10,24 @@ In terminal, in the root directory of this project, run `rspec` (or `rspec -f d`
 
 Back in the terminal, at the bottom of the rspec output the bottom line says 10 examples, 0 failures, 10 pending. This is because when you can declare an example before defining it. When you run the test with the undefined example it won't count as a failure or a pass but rspec will note the number of pending example you have yet to implement.
 
-In user_spec.rb, insert `do...end` block at the end of line seven. Here you define your example. In the block we write the ruby necessary to produce the behavior we want to define followed by our specs or matchers. A spec is made of two parts, an expectation and a matcher.
+In user_spec.rb, insert `do...end` block at the end of line seven.
 ```ruby
 it "#name returns name when set" do
-  bob = User.new(name: "Bob", username: "bdylan" )
-  expect(bob.name).to eq("Bob")
-end  
+  # setup
+  # spec
+end
+it "#name returns username when no name is set"
 ```
+Here you define your example. In the block you write the ruby necessary to produce the behavior you want to define followed by your specs. The '#' in '#name' denotes a method of the class you are describing (User). To define this behavior, you need an instance of User to call name on. So you say `bob = User.new(name: "Bob", username: "bdylan" )`. Now you use the expect method and give it the result of calling name on bob. You then say you expect the result of that to be "Bob" by using the matcher eq("Bob"). All together, our first test looks like:
+```ruby
+it "#name returns name when set" do
+  bob = User.new(name: "Bob", username: "bdylan" ) # setup
+  expect(bob.name).to eq("Bob") # spec
+end
+it "#name returns username when no name is set"
+```
+Rerun `rspec` again in the terminal. With `-f d`, the difference is more apparent but we wrote our first spec and it was met. Now we only have 9 pending examples. Use this example, the lesson plan, the links below, google, your classmates and as an ultimate measure the solution branch to complete the definitions for the last 9 examples.
+
+[More on matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
+[Let](https://www.relishapp.com/rspec/rspec-core/v/2-5/docs/helper-methods/let-and-let)
+[Good rspec guide](http://betterspecs.org/)
